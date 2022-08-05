@@ -103,6 +103,7 @@ RSpec.describe "Cats", type: :request do
       cat = JSON.parse(response.body)
       expect(cat['name']).to include "can't be blank"
     end
+
     it "doesn't create a cat without an age" do
       cat_params = {
         cat: {
@@ -117,6 +118,7 @@ RSpec.describe "Cats", type: :request do
       cat = JSON.parse(response.body)
       expect(cat['age']).to include "can't be blank"
     end
+
     it "doesn't create a cat without an enjoys" do
       cat_params = {
         cat: {
@@ -131,6 +133,7 @@ RSpec.describe "Cats", type: :request do
       cat = JSON.parse(response.body)
       expect(cat['enjoys']).to include "can't be blank"
     end
+
     it "doesn't create a cat without an image" do
       cat_params = {
         cat: {
@@ -162,6 +165,7 @@ RSpec.describe "Cats", type: :request do
         expect(cat['name']).to include "can't be blank"
       end  
   end 
+
     it "doesn't update a cat without an age" do
     cat_params = {
       cat: {
@@ -176,6 +180,7 @@ RSpec.describe "Cats", type: :request do
     cat = JSON.parse(response.body)
     expect(cat['age']).to include "can't be blank"
     end
+
     it "doesn't update a cat without an enjoys" do
       cat_params = {
         cat: {
@@ -190,6 +195,7 @@ RSpec.describe "Cats", type: :request do
       cat = JSON.parse(response.body)
       expect(cat['enjoys']).to include "can't be blank"
     end
+    
     it "doesn't update a cat without an image" do
       cat_params = {
         cat: {
